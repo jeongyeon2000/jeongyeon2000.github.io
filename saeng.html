@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="slide.css">
+<title>생과방</title>
+<style>
+body{
+    -ms-overflow-style: none;
+    font-family: "을유1945";
+
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type: none;
+}
+body {background-color: white;
+    font-size : 100%;
+    height: 100%;
+    color: black;
+}
+.clear {
+  clear: both;
+}
+
+[class*="c_"] {
+    float: left;
+}
+/*모바일*/
+@media only screen and (max-width: 780px) {
+    .c_m_9 {width: 98%;}/*영상*/
+
+    .c_m_11 {width: 80%; float:left; margin-top: 3px;
+          text-align: center; line-height: 170%;}/*간단설명 메인*/
+    .c_m_12 {width: 10%; float:left; padding: 15px; height: 30vh;}/*간단설명 왼/오*/
+
+      .c_m_7 {width: 100%;  margin-top: 30px;}/*가로이미지*/
+      .c_m_72 {width: 100%;  margin-top: 30px;}/*가로이미지*/
+
+    .c_m_4 {width: 100%; text-align: center;  margin-top: 30px;}/*우측*/
+    .c_m_5 {width: 100%; margin-top: 20px;}
+
+    .c_m_2 {width: 100%; text-align: center;  margin-top: 20px;}/*좌측*/
+    .c_m_1 {width: 100%; margin-top: 30px;}
+    .c_m_13 { width: 100%; margin-top: 30px;}
+
+    .c_m_17 {width: 100%; float:left; padding-top: 40px; margin-bottom: 3%;}/*우측 콘텐츠 마지막 이미지*/
+
+  }
+  /*컴퓨터*/
+@media only screen and (min-width: 780px) {
+    .c_m_9 {width: 80%;}/*영상메인*/
+    .c_m_10 {width: 10%; }/*영상 좌우 마진*/
+
+    .c_m_11 {width: 50%; float:left; padding-top: 18px;
+          text-align: center; line-height: 170%;}/*간단설명 메인*/
+    .c_m_12 {width: 25%; float:left; padding: 15px; height: 30vh;}/*간단설명 왼/오*/
+
+    .c_m_7 { width: 80%; float: left; margin-top: 30px;}/*가로이미지*/
+    .c_m_72 { width: 80%; float: left; margin-top: -10px;}/*가로이미지*/
+    .c_m_8 {width: 10%; float: left; padding: 15px;}/*가로 이미지 좌우마진*/
+
+    .c_m_4 {width: 35%;
+            float:left; padding-top: 80px; padding-right: 40px;
+             text-align: right;
+            height: 15vh;
+            display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            flex-direction: column;}/*우측 콘텐츠 텍스트*/
+    .c_m_5 {width: 45%; float:left; padding-top: 40px;}/*우측 콘텐츠 이미지*/
+    .c_m_6 {width: 10%; float:left; padding: 15px;}/*우측 콘텐츠 좌우마진*/
+
+
+.c_m_17 {width: 45%; float:left; padding-top: 40px; margin-bottom: 3%;}/*우측 콘텐츠 마지막 이미지*/
+
+    .c_m_1 {width: 45%; float:left; padding-top: 40px;}/*좌측 콘텐츠 이미지*/
+    .c_m_2 {width: 35%;
+            float:left;  padding-top: 80px; padding-left: 40px;
+            text-align: left;
+            height: 15vh;
+            display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            flex-direction: column;}/*좌측 콘텐츠 텍스트*/
+    .c_m_3 {width: 10%; float:left; padding: 15px;}/*좌측 콘텐츠 좌우마진*/
+
+    .c_m_13 { width:24%; float:left;border: solid 1px gray; margin-top: 40px; padding-left: 10px; margin-bottom: 40px;}/*이미지 슬라이드*/
+
+    .c_m_14 { width: 2%; float:left; margin-top: 40px;}/*이미지 슬라이드 좌우 마진*/
+  }
+
+.c1 {width: 44%; float:left; padding: 35px; height: 15vh;}/*제목*/
+.c2 {width: 28%; float:left; padding: 15px;height: 15vh;}/*상단 왼쪽*/
+.cmenu {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh; position: fixed; right: 0px;}/*메뉴박스*/
+.c3 {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh;}/*메뉴박스 위치도우미*/
+
+aside {
+    color: #ffffff;
+    border: solid 2px rgba(0,0,0,0);
+}
+aside li {
+    padding:10px;
+    margin: 5px;
+}
+.height {
+  height: 408px;
+}
+/*제목부분*/
+section#title {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+/*  text-align: center;*/
+  /*padding:100px 50px 100px 50px;*/
+  line-height: 160%;
+}
+
+section#title p {
+  margin-top: 3px;
+    font-size: 0.9em;
+}
+section#title h1 {
+  font-family: "Songti TC";
+    font-size: 1.4em;
+}
+
+
+/*간단 설명*/
+section.c_m_11 h1 {
+  padding: 10px;
+    font-size: 0.9em;
+}
+section.c_m_11 p {
+  padding-top: 2px;
+    font-size: 0.7em;
+}
+
+
+section.c_m_4 h1 {
+  padding-bottom: 5px;
+    font-size: 0.9em;
+}
+section.c_m_4 p {
+  margin-top: 20px;
+  padding-top: 2px;
+  line-height: 180%;
+    font-size: 0.7em;
+}
+
+section.c_m_2 h1 {
+  padding-bottom: 5px;
+    font-size: 0.9em;
+}
+section.c_m_2 p {
+  margin-top: 20px;
+  padding-top: 2px;
+  line-height: 180%;
+    font-size: 0.7em;
+}
+
+/*이미지 슬라이드*/
+.slide_margin{
+}
+.slidebox {width:100%;margin:0 auto;position:relative;}
+.slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#ddd;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:inline;;width:auto;position:relative; text-align: center;}
+.slidebox .slidelist .slideitem > a img {width:100%;}
+.text {
+  text-align: center;
+  font-family: "나눔스퀘어OTF Bold";
+  font-size: 14px;
+  color: #000;
+}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:5%;background:rgba(255,255,255,0.3) center center / 50% no-repeat;  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1); }
+.slidebox .slide-control [class*="control"] label.next {right:5%;background:rgba(255,255,255,0.3) center center / 50% no-repeat;  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1); }
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
+#slide04:checked ~ .slide-control .control04 {display:block;}
+
+
+
+</style>
+</head>
+
+<body>
+
+  <aside class="c2"><!--제목-->
+  </aside>
+  <section id="title"  class="c1">
+    <h1>生果房</h1>
+    <p>생과방</p><br>
+  </section>
+
+<aside class="c3">
+</aside><!--위치 도우미-->
+
+<aside class="cmenu">
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <span class= "menu">
+        <a href= "index.html">경복궁<br></a>
+        <a href= "night.html">야간개장<br></a>
+    <a href= "geun.html">근정전<br></a>
+    <a href= "kyeong.html">경회루<br></a>
+    <a href= "#" style= "color: rgba(255,255,255,0.7)">생과방</a>
+  </span>
+  </div>
+</aside>
+
+
+
+<aside class="c_m_10 height"><!--영상-->
+</aside>
+  <section class="c_m_9">
+      <iframe width="100%" height="610" src="https://www.youtube.com/embed/mRo_9B1YfRE" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+    </section>
+  <aside class="c_m_10 height">
+  </aside>
+
+<div class="clear"></div>
+
+    <aside class="c_m_12"><!--간단 설명-->
+    </aside>
+      <section class="c_m_11">
+          <h1>실제 임금이 먹었던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록</h1>
+          <p>경복궁 소주방 전각에 위치한 '생과방'은 궁중의 육처소 가운데 하나이며, '국왕과 왕비'의 후식과 별식을 준비하던 곳으로 '생물방 또는 생것방이라고도 불렸다.
+          경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 먹었던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구덩되었다.
+        생과방 내부에 위치한 호궤소에서 궁중병과와 중중약차 메뉴를 직접 선택한 후 안내에 따라 궁중다과를 시식/체험할 수 있다.</p>
+        </section>
+      <aside class="c_m_12">
+      </aside>
+
+<div class="clear"></div>
+
+<aside class="c_m_8"><!--가로 이미지-->
+</aside>
+<section class= "c_m_72">
+  <img src= "./saeng/ho_3.png" width= "100%">
+</section>
+<aside class="c_m_8">
+</aside>
+
+<div class="clear"></div>
+
+<aside class="c_m_3"><!--좌측 콘텐츠-->
+</aside>
+  <section class="c_m_1">
+      <img src= "./saeng/saeng_img1.png" width= "100%">
+    </section>
+
+    <section class="c_m_2">
+
+      </section>
+  <aside class="c_m_3">
+  </aside>
+
+  <div class="clear"></div>
+
+<aside class="c_m_6"><!--우측 콘텐츠-->
+</aside>
+  <section class="c_m_4">
+
+    </section>
+
+    <section class="c_m_5">
+        <img src= "./saeng/saeng_img2.png" width= "100%">
+      </section>
+  <aside class="c_m_6">
+  </aside>
+
+<!--한세트-->
+
+  <div class="clear"></div>
+
+  <aside class="c_m_8"><!--가로 이미지-->
+  </aside>
+  <section class= "c_m_7">
+    <img src= "./saeng/ho_1.png" width= "100%">
+  </section>
+  <aside class="c_m_8">
+  </aside>
+
+  <div class="clear"></div>
+
+  <aside class="c_m_3"><!--좌측 콘텐츠-->
+  </aside>
+    <section class="c_m_1">
+        <img src= "./saeng/saeng_img3.png" width= "100%">
+      </section>
+
+      <section class="c_m_2">
+
+        </section>
+    <aside class="c_m_3">
+    </aside>
+
+  <div class="clear"></div>
+
+    <aside class="c_m_6"><!--우측 콘텐츠-->
+    </aside>
+      <section class="c_m_4">
+
+        </section>
+
+        <section class="c_m_17">
+            <img src= "./saeng/saeng_img4.png" width= "100%">
+          </section>
+      <aside class="c_m_6">
+      </aside>
+</body>
+</html>

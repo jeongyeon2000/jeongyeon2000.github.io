@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="slide.css">
+<title>경회루</title>
+<style>
+body{
+    -ms-overflow-style: none;
+    font-family: "을유1945";
+
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type: none;
+}
+body {background-color: white;
+    font-size : 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+}
+.clear {
+  clear: both;
+}
+
+[class*="c_"] {
+    float: left;
+}
+/*모바일*/
+@media only screen and (max-width: 780px) {
+  .c_m_11 {width: 80%; float:left; margin-top: 3px;
+        text-align: center; line-height: 130%;}/*간단설명 메인*/
+  .c_m_12 {width: 10%; }
+    .c_m_13 { width: 100%; margin-top: 20px; display: flex; justify-content: center; margin-bottom: 3%;}
+    .c_m_3 { width: 100%; margin-top: 25px; text-align: center; font-size: 0.7em}
+  }
+  /*컴퓨터*/
+@media only screen and (min-width: 780px) {
+  .c_m_11 {width: 50%; float:left; margin-top: -5px;
+        text-align: center; line-height: 170%;}/*간단설명 메인*/
+  .c_m_12 {width: 25%; float:left; padding: 15px; height: 30vh;}/*간단설명 왼/오*/
+
+    .c_m_13 { width:85%; display: flex; float:left;
+              justify-content: center; margin-top: 30px; margin-bottom: 20%;}/*이미지 슬라이드*/
+    .c_m_14 { width: 7.5%; float:left; margin-top: 40px;}/*이미지 슬라이드 좌우 마진*/
+  }
+
+.c1 {width: 44%; float:left; padding: 35px; height: 20vh;}/*제목*/
+.c2 {width: 28%; float:left; padding: 15px;height: 15vh;}/*상단 왼쪽*/
+.cmenu {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh; position: fixed; right: 0px;}/*메뉴박스*/
+.c3 {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh; z-index: 10;}/*메뉴박스 위치도우미*/
+
+aside {
+    color: #ffffff;
+    border: solid 2px rgba(0,0,0,0);
+    z-index: 10;
+}
+aside li {
+    padding:10px;
+    margin: 5px;
+}
+.height {
+  height: 408px;
+}
+/*제목부분*/
+section#title {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+/*  text-align: center;*/
+  /*padding:100px 50px 100px 50px;*/
+  line-height: 160%;
+}
+
+section#title p {
+  margin-top: 3px;
+    font-size: 0.9em;
+}
+section#title h1 {
+  font-family: "Songti TC";
+    font-size: 1.4em;
+}
+
+
+/*간단 설명*/
+section.c_m_11 h1 {
+  padding: 10px;
+    font-size: 0.9em;
+}
+section.c_m_11 p {
+  padding-top: 2px;
+    font-size: 0.7em;
+}
+
+
+/*이미지 슬라이드*/
+.slide_margin{
+}
+.slidebox {width:100%;margin:0 auto;position:relative; z-index: 1;}
+.slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#ddd;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:inline;;width:auto;position:relative; text-align: center;}
+.slidebox .slidelist .slideitem > a img {width:100%;}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:5;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:5%;background:rgba(255,255,255,0.3) center center / 50% no-repeat;  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1); }
+.slidebox .slide-control [class*="control"] label.prev:active{background:rgba(255,255,255,0.5);}
+.slidebox .slide-control [class*="control"] label.next {right:5%;background:rgba(255,255,255,0.3) center center / 50% no-repeat;  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1); }
+.slidebox .slide-control [class*="control"] label.next:active{background:rgba(255,255,255,0.5);}
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
+#slide04:checked ~ .slide-control .control04 {display:block;}
+
+</style>
+</head>
+
+<body>
+<audio src= "flower.mp3" autoplay></audio>
+  <aside class="c2"><!--제목-->
+  </aside>
+  <section id="title"  class="c1">
+    <h1>慶會樓</h1>
+    <p>경회루</p><br>
+  </section>
+
+<aside class="c3">
+</aside><!--위치 도우미-->
+
+<aside class="cmenu">
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <span class= "menu">
+        <a href= "index.html">경복궁<br></a>
+        <a href= "night.html">야간개장<br></a>
+    <a href= "geun.html">근정전<br></a>
+    <a href= "#" style= "color: rgba(255,255,255,0.7)">경회루<br></a>
+    <a href= "saeng.html">생과방</a>
+  </span>
+  </div>
+</aside>
+
+  <div class="clear"></div>
+
+  <aside class="c_m_12"><!--간단 설명-->
+  </aside>
+    <section class="c_m_11">
+        <h1>나라에 경사가 있거나 사신이 왔을 때 연회를 베풀던 곳</h1>
+        <p>경회루는 침전영역 서쪽에 위치한 연못 안에 조성된 누각이다. 외국사신의 접대나 임금과 신하 사이에 벌어지는 연회장소로 사용할 목적으로 만들어졌다.
+          경복궁 창건 당시는 작은 누각이었던 것을 태종 12년(1412)에 크게 연못을 파고 지금과 같은 규모로 만들었다.
+          그 후 성종 때 건물이 기울어져 다시 고쳐 지었는데 돌기둥에 용과 꽃 장식을 하여 화려하게 치장하고, 연산군 때에는 연못 안 인공섬에 만세산을 조성하고,
+          그 곳에 월궁을 꾸며 조화를 장식하였으나, 임진왜란 때 화재로 모두 소실되었다.
+          경회루건물은 없어졌지만, 경복궁이 중건될 때까지 연못은 나라에 가뭄이 들 때마다 기우제를 지내는 곳으로 이용되었다.</p>
+      </section>
+    <aside class="c_m_12">
+    </aside>
+
+    <div class="clear"></div>
+
+  <aside class="c_m_14">
+  </aside>
+  <section class="c_m_13">
+    <div class="slide_margin">
+        <div class="slidebox">
+          <input type="radio" name="slide" id="slide01" checked>
+          <input type="radio" name="slide" id="slide02">
+          <input type="radio" name="slide" id="slide03">
+          <input type="radio" name="slide" id="slide04">
+          <ul class="slidelist">
+            <li class="slideitem">
+              <a><img src="./kyeong/kyeong_img1.png" width= "100%"></a>
+            </li>
+            <li class="slideitem">
+              <a><img src="./kyeong/kyeong_img2.png" width= "100%"></a>
+            </li>
+            <li class="slideitem">
+              <a><img src="./kyeong/kyeong_img3.png" width= "300"></a>
+            </li>
+            <li class="slideitem">
+              <a><img src="./kyeong/kyeong_img4.png" width= "300"></a>
+            </li>
+
+          </ul>
+          <div class="slide-control">
+            <div class="control01">
+              <label for="slide04" class="prev"></label>
+              <label for="slide02" class="next"></label>
+            </div>
+            <div class="control02">
+              <label for="slide01" class="prev"></label>
+              <label for="slide03" class="next"></label>
+            </div>
+            <div class="control03">
+              <label for="slide02" class="prev"></label>
+              <label for="slide04" class="next"></label>
+            </div>
+            <div class="control04">
+              <label for="slide03" class="prev"></label>
+              <label for="slide01" class="next"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+    <aside class="c_m_14">
+    </aside>
+
+</body>
+</html>

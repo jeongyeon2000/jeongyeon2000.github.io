@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="slide.css">
+<title>근정전</title>
+<style>
+body{
+    -ms-overflow-style: none;
+    font-family: "을유1945";
+
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type: none;
+}
+body {background-color: white;
+    font-size : 100%;
+    height: 100%;
+    color: black;
+}
+.clear {
+  clear: both;
+}
+
+[class*="c_"] {
+    float: left;
+}
+/*모바일*/
+@media only screen and (max-width: 780px) {
+  .c_m_1 {width: 100%; height: 25vh;
+    background-image: url("./geun/geun_video.jpeg"); margin-bottom: 2%;}/*타일*/
+    .c_m_2 {width: 100%; height: 25vh;
+      background-image: url("./geun/geun_name.jpeg"); margin-bottom: 2%;}/*타일*/
+      .c_m_3 {width: 100%; height: 25vh;
+        background-image: url("./geun/geun_obong.jpeg"); margin-bottom: 2%;}/*타일*/
+        .c_m_4 {width: 100%; height: 25vh;
+          background-image: url("./geun/geun_hae.jpeg"); margin-bottom: 2%;}/*타일*/
+          .c_m_17 {width: 100%; height: 25vh;
+            background-image: url("./geun/geun_chil.jpeg"); margin-bottom: 5%;}/*타일*/
+    .c_m_1:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+      .c_m_2:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+        .c_m_3:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+          .c_m_4:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+            .c_m_17:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+    .sub_title{
+      font-size: 0.9em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25vh;
+      color: white;
+    }
+
+  }
+  /*컴퓨터*/
+@media only screen and (min-width: 780px) {
+    .c_m_1 {width: 80%; height: 25vh;
+      background-image: url("./geun/geun_video.jpeg"); margin-bottom: 2%;}/*타일*/
+      .c_m_2 {width: 80%; height: 25vh;
+        background-image: url("./geun/geun_name.jpeg"); margin-bottom: 2%;}/*타일*/
+        .c_m_3 {width: 80%; height: 25vh;
+          background-image: url("./geun/geun_obong.jpeg"); margin-bottom: 2%;}/*타일*/
+          .c_m_4 {width: 80%; height: 25vh;
+            background-image: url("./geun/geun_hae.jpeg"); margin-bottom: 2%;}/*타일*/
+            .c_m_17 {width: 80%; height: 25vh;
+              background-image: url("./geun/geun_chil.jpeg"); margin-bottom: 3%;}/*타일*/
+
+      .c_m_1:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+        .c_m_2:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+          .c_m_3:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+            .c_m_4:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+              .c_m_17:hover {opacity: 0.8; cursor: pointer;}/*타일*/
+    .c_m_7 {width: 10%; }/*타일 좌우 마진*/
+    .sub_title{
+      font-size: 0.9em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25vh;
+      color: white;
+    }
+
+
+  }
+
+.c1 {width: 44%; float:left; padding: 35px; height: 20vh;}/*제목*/
+.c2 {width: 28%; float:left; padding: 15px;height: 15vh;}/*상단 왼쪽*/
+.cmenu {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh; position: fixed; right: 0px;}/*메뉴박스*/
+.c3 {width: 28%; float:left; padding: 30px 50px 30px 50px; height: 15vh;}/*메뉴박스 위치도우미*/
+
+aside {
+    color: #ffffff;
+    border: solid 2px rgba(255, 255, 255, 0);
+}
+aside li {
+    padding:10px;
+    margin: 5px;
+}
+
+/*제목부분*/
+section#title {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+/*  text-align: center;*/
+  /*padding:100px 50px 100px 50px;*/
+  line-height: 160%;
+}
+
+section#title p {
+  margin-top: 3px;
+    font-size: 0.9em;
+}
+section#title h1 {
+  font-family: "Songti TC";
+    font-size: 1.4em;
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <aside class="c2"><!--제목-->
+  </aside>
+  <section id="title"  class="c1">
+    <h1>勤政殿</h1>
+    <p>근정전</p><br>
+  </section>
+
+<aside class="c3">
+</aside><!--위치 도우미-->
+
+<aside class="cmenu">
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <span class= "menu">
+        <a href= "index.html">경복궁<br></a>
+        <a href= "night.html">야간개장<br></a>
+    <a href= "geun.html" style= "color: rgba(255,255,255,0.7)">근정전<br></a>
+    <a href= "kyeong.html">경회루<br></a>
+    <a href= "saeng.html">생과방</a>
+  </span>
+  </div>
+</aside>
+
+
+
+
+<aside class="c_m_7"></aside><!--영상-->
+  <a href= "geun_video.html"><section class="c_m_1"><p class= "sub_title">근정전 둘러보기</p></section></a>
+  <aside class="c_m_7"></aside>
+  <div class="clear"></div>
+
+  <aside class="c_m_7"></aside>
+  <a href= "geun_name.html"><section class="c_m_2"><p class= "sub_title">근정전</p></section></a>
+  <aside class="c_m_7"></aside>
+    <div class="clear"></div>
+
+  <aside class="c_m_7"></aside>
+  <a href= "geun_obong.html"><section class="c_m_3"><p class= "sub_title">일월오봉도</p></section></a>
+  <aside class="c_m_7"></aside>
+    <div class="clear"></div>
+
+  <aside class="c_m_7"></aside>
+  <a href= "geun_haetae.html"><section class="c_m_4"><p class= "sub_title">해태</p></section></a>
+  <aside class="c_m_7"></aside>
+    <div class="clear"></div>
+
+  <aside class="c_m_7"></aside>
+  <a href= "geun_chil.html"><section class="c_m_17"><p class= "sub_title">칠조룡</p></section></a>
+  <aside class="c_m_7"></aside>
+    <div class="clear"></div>
+
+</body>
+</html>

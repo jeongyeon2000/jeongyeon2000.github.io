@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  z-index: 5;
+font-family: "을유1945";  font-size: 14px;
+  position: relative;
+  line-height: 300%;
+  top: 18%;
+  left: 13%;
+  color: white;
+}
+input[id="menuicon"] {display:none;}
+
+input[id="menuicon"] + label {
+  display:block;
+  margin-top: 2%;
+  margin-left: 94%;
+  width:35px;
+  height:30px;
+  position:relative;
+  cursor:pointer;
+}
+
+input[id="menuicon"] + label span {
+  display:block;
+  position:absolute;
+  width:100%;
+  height:4px;
+  border-radius:0px;
+  background:rgba(255, 255, 255, 0.8);
+  transition:all .35s;}
+
+input[id="menuicon"] + label span:nth-child(1) {top:0;}
+input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);}
+input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+
+input[id="menuicon"]:checked + label {z-index:10;}
+input[id="menuicon"]:checked + label span {background:#fff;}
+input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(-45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(45deg);}
+
+div[class="sidebar"] {
+  width:20%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.5);
+  position:fixed;top:0;
+  right:-600px;
+  z-index:5;
+  transition:all .35s;
+}
+input[id="menuicon"]:checked + label + div {right:0;}
